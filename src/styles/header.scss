@@ -1,0 +1,97 @@
+.header {
+  color: #606060;
+  background-color: #fcfcfc;
+  letter-spacing: -2px;
+  padding: 120px 0 80px;
+  margin-bottom: 40px;
+  z-index: 2;
+  border-bottom: 1px solid #f3f3f3;
+  text-align: left;
+  opacity:0;
+  position: relative;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:0.3s;
+  transition: all 0.2s;
+
+  &.smaller {
+    font-size: 12px;
+    padding: 20px 0 50px;
+    background-color: #3C5574;
+    color: #fff;
+
+    .header__logo {
+      margin: 0 auto;
+      height: 50px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      transform: translateX(0);
+    }
+    .header__title {
+      color: #fff;
+      letter-spacing: 1px;
+      font-weight: 400;
+      text-align: left;
+      margin-left: 90px;
+      left: 90px;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.header__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 5em;
+  top: 20px;
+  display: block;
+  // transition: all 0.2s;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.header__title {
+  font-weight: 800;
+  text-decoration: none;
+  text-align: center;
+  color: #363636;
+  letter-spacing: -2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header__icon {
+  font-size: 2em;
+  color: #fefefe;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.header__user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.header__user__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-size: cover;
+  border: 2px solid #000;
+  display: inline-block;
+}
+
+.header__logout {
+  float: right;
+}
+.header__logout__icon {
+  font-size: 25px;
+  padding: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  &:hover {
+    color: #ccc;
+  }
+}

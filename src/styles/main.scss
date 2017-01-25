@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,800);
+
+* { box-sizing: border-box;margin: 0; padding: 0; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #fefefe;
+}
+
+a {
+  text-decoration: none;
+  color: #3FBB68;
+}
+
+.main-app {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1em;
+  min-height: 80vh;
+
+  opacity:0;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:0.3s;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+
+.textarea,
+.input {
+  border: 0;
+  font-weight: 100;
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px auto;
+}
+.textarea {
+  font-size: 2em;
+  resize: none;
+  min-height: 150px;
+}
+
+.btn {
+  font-size: 1.5em;
+  font-weight: 100;
+  padding: 10px 2em;
+  text-align: center;
+  display: block;
+  border: 0;
+  text-transform: uppercase;
+  margin: 20px auto;
+  border-radius: 25px;
+  background-color: #3FBB68;
+  color: #fff;
+  cursor: pointer;
+  outline: 0;
+
+  &:hover {
+    background-color: lighten(#3FBB68, 5);
+  }
+  &:active {
+    background-color: darken(#3FBB68, 5);
+  }
+}
